@@ -8,13 +8,17 @@ import { MaterialModule } from './shared/material/material.module';
 import { TopoComponent } from './shared/components/topo/topo.component';
 import { RodapeComponent } from './shared/components/rodape/rodape.component';
 import { ContatosListaComponent } from './contatos/contatos-lista/contatos-lista.component';
+import { ContatosCadastroComponent } from './contatos/contatos-cadastro/contatos-cadastro.component';
+import { DialogComponent } from './shared/components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopoComponent,
     RodapeComponent,
-    ContatosListaComponent
+    ContatosListaComponent,
+    ContatosCadastroComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

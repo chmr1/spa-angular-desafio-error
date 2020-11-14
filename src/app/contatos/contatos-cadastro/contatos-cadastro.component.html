@@ -1,0 +1,67 @@
+<mat-toolbar class="app-title">Adicionar Contato</mat-toolbar>
+    <div class="main-content">
+    <mat-card class="main-card">
+        <form autocomplete="off">
+            <mat-card-header class="card-header">
+                <mat-card-title>Contato</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="card-image">
+                    <img mat-card-image src="{{ semFoto }}" alt="Sem foto">
+                </div>
+                <div class="card-content">
+                    <div class="container">
+                        <div class="formulario">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <mat-form-field>
+                                        <mat-label>Aniversário</mat-label>
+                                        <input matInput [matDatepicker]="picker1">
+                                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker1></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <mat-form-field><mat-label>Nome</mat-label><input matInput></mat-form-field>
+                                </div>
+                                <div class="col-sm-6">
+                                    <mat-form-field><mat-label>Sobrenome</mat-label><input matInput></mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <mat-form-field>
+                                        <mat-label>Tipo</mat-label>
+                                        <mat-select>
+                                            <mat-option *ngFor="let tipo of tipos" [value]="tipo.valor">{{ tipo.texto }}</mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-sm-6">
+                                    <mat-form-field>
+                                        <mat-label>Telefone</mat-label>
+                                        <span matPrefix>+55 &nbsp;</span>
+                                        <input type="tel" matInput placeholder="084988776655">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <mat-form-field>
+                                        <mat-label>Endereço</mat-label><textarea matInput placeholder="Ex. Springfield, 1000"></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button type="button" color="primary" mat-raised-button (click)="salvar()">Salvar</button>
+                <button type="button" color="basic" mat-raised-button (click)="cancelar()">Cancelar</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</div>
