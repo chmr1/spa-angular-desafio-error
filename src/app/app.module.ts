@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { TopoComponent } from './shared/components/topo/topo.component';
 import { RodapeComponent } from './shared/components/rodape/rodape.component';
+import { ContatosListaComponent } from './contatos/contatos-lista/contatos-lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopoComponent,
-    RodapeComponent
+    RodapeComponent,
+    ContatosListaComponent
   ],
   imports: [
     BrowserModule,

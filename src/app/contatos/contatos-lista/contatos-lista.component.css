@@ -1,0 +1,26 @@
+.lista-content {
+    width: 100%;
+    margin: auto;
+    max-width: 1300px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.lista-card {
+    width: calc(50% - 10px);
+    min-width: 250px;
+    max-width: 300px;
+    margin: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.lista-card-image {
+    background-size: cover;
+}
+
+.lista-card-image img {
+    width: 100%;
+    height: 100%;
+}

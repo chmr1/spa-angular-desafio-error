@@ -1,7 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContatosListaComponent } from './contatos/contatos-lista/contatos-lista.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'contatos',
+    pathMatch: 'full'
+  },
+  {
+    path: 'contatos',
+    children: [
+      {
+        path: '',
+        component: ContatosListaComponent
+      }
+    ]
+  },
+  { path: '**', redirectTo: 'contatos' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

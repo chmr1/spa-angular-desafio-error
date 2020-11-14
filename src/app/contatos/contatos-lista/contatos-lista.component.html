@@ -1,0 +1,18 @@
+<mat-toolbar class="app-title">Contatos Salvos</mat-toolbar>
+<div class="lista-content">
+    <mat-card class="lista-card" *ngFor="let contato of contatos">
+        <mat-card-header>
+            <div mat-card-avatar class="lista-card-image">
+                <img [src]="contato.urlFoto || semFoto">
+            </div>
+            <mat-card-title>{{ contato.nome }} {{ contato.sobrenome }}</mat-card-title>
+            <mat-card-subtitle>{{ contato.telefone }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="contato.urlFoto || semFoto" [alt]="contato.nome">
+        <mat-card-content><p>{{ contato.observacao }}</p></mat-card-content>
+        <mat-card-actions>
+            <button mat-button>DETALHAR</button>
+            <button mat-button>APAGAR</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

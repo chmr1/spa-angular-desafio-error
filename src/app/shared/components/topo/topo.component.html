@@ -2,7 +2,7 @@
     <mat-sidenav #sidenav class="sidenav" fixedInViewport="true" >
         <mat-toolbar color="primary">Menu</mat-toolbar>
         <mat-nav-list (click)="closeSideNav()">
-            <a mat-list-item>Inicial</a>
+            <a mat-list-item [routerLink]="['/contatos']">Inicial</a>
             <mat-divider></mat-divider>
             <a mat-list-item>Adicionar Contato</a>
             <mat-divider></mat-divider>
