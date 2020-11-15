@@ -10,6 +10,7 @@ import { RodapeComponent } from './shared/components/rodape/rodape.component';
 import { ContatosListaComponent } from './contatos/contatos-lista/contatos-lista.component';
 import { ContatosCadastroComponent } from './contatos/contatos-cadastro/contatos-cadastro.component';
 import { DialogComponent } from './shared/components/dialog/dialog.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DialogComponent } from './shared/components/dialog/dialog.component';
     RodapeComponent,
     ContatosListaComponent,
     ContatosCadastroComponent,
-    DialogComponent
+    DialogComponent,
+    SobreComponent
   ],
   imports: [
     BrowserModule,
